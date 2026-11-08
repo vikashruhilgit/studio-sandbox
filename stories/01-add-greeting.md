@@ -1,6 +1,6 @@
 # Add a greeting script
 
-## Status: ready
+## Status: done
 
 Add a script `greeting.sh` at the repo root that prints `hello` and exits 0.
 
