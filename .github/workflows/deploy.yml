@@ -1,0 +1,13 @@
+name: deploy-integration
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  deploy-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulated deployment integration (fails on author permissions, no code fix reaches it)
+        run: |
+          echo "Deployment blocked: git author lacks deploy permission on this project"
+          exit 1
