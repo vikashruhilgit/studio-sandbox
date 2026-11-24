@@ -4,7 +4,7 @@
 
 ## Tech stack
 
-- Bash scripts only. No package manager, no build step, no dependencies.
+- Bash scripts, plus `ping.js` and a `package.json` whose `npm test` is the one check. No dependencies, no build step.
 
 ## Directory structure
 
@@ -12,7 +12,8 @@
 |---|---|
 | `*.sh` (repo root) | The scripts the stories ask for. Each lives at the repo root. |
 | `stories/`, `stories-p15/` | Requirement files, one story each, read by Loomwright `/automate`. |
-| `.github/workflows/ci.yml` | The `ci` check: `bash -n` on every root `*.sh`. |
+| `.github/workflows/ci.yml` | The `ci` check: `npm test`. |
+| `package.json`, `ping.js` | `npm test` runs `node ping.js`; a story that adds a script makes `npm test` run it too. |
 
 ## Key patterns
 

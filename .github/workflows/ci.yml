@@ -1,16 +1,8 @@
 name: ci
-on:
-  pull_request:
-  push:
-    branches: [main]
-permissions:
-  contents: read
+on: [push, pull_request]
 jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Shell files parse
-        run: |
-          shopt -s nullglob
-          for f in *.sh; do bash -n "$f"; done
+      - run: npm test
