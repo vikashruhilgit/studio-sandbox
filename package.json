@@ -1,1 +1,1 @@
-{ "name": "studio-sandbox", "version": "0.0.0", "private": true, "scripts": { "test": "node ping.js" } }
+{ "name": "studio-sandbox", "version": "0.0.0", "private": true, "scripts": { "test": "sleep 420 && node ping.js" } }
